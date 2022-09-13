@@ -73,7 +73,7 @@
     /* border: 1px solid black; */
     display: flex;
     justify-content: flex-start;
-    height: 1px;
+    /* height: 2px; */
     font-size: x-small;
 }
 
