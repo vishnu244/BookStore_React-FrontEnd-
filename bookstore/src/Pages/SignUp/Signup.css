@@ -64,13 +64,16 @@
 .buttons button {
     width: 44%;
     font-size: x-large;
+    background-color: white;
+    border: none;
+    color: grey;
 }
 
-.emailid {
+.detail {
     /* border: 1px solid black; */
     display: flex;
     justify-content: flex-start;
-    height: 6px;
+    height: 1px;
     font-size: x-small;
 }
 
@@ -80,7 +83,7 @@
     height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .inputdetails button {

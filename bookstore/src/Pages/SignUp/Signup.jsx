@@ -15,18 +15,18 @@ function Signup() {
                     </div>
                     <div class="table2">
                         <div className="buttons">
-                            <button style={{ backgroundColor: "white", border: "none", color: "grey" }}>LOGIN</button>
-                            <button style={{ backgroundColor: "white", border: "none", fontWeight: "bold" }}>SIGNUP</button>
+                            <button >LOGIN</button>
+                            <button style={{ fontWeight: "bold", color: "black" }}>SIGNUP</button>
                         </div>
                         <div className="inputdetails">
-                            <label className="emailid">Full Name</label>
-                            <TextField id="outlined-basic" className="emailinput" variant="outlined" size='small' placeholder=" Full Name " />
-                            <label className="emailid">Email Id</label>
-                            <TextField id="outlined-basic" className="emailinput" variant="outlined" size="small" placeholder=" Email Id " />
-                            <label className="emailid">Password</label>
-                            <TextField id="outlined-basic" className="emailinput" variant="outlined" size="small" placeholder=" Password " />
-                            <label className="emailid">Mobile Number</label>
-                            <TextField id="outlined-basic" className="emailinput" variant="outlined" size="small" placeholder=" Mobile Number " />
+                            <label className="detail">Full Name</label>
+                            <TextField id="outlined-basic" variant="outlined" size='small' placeholder=" Full Name " />
+                            <label className="detail">Email Id</label>
+                            <TextField id="outlined-basic" variant="outlined" size="small" placeholder=" Email Id " />
+                            <label className="detail">Password</label>
+                            <TextField id="outlined-basic" variant="outlined" size="small" placeholder=" Password " />
+                            <label className="detail">Mobile Number</label>
+                            <TextField id="outlined-basic" variant="outlined" size="small" placeholder=" Mobile Number " />
                             <button >Signup</button>
                         </div>
                     </div>
