@@ -56,6 +56,7 @@
 
 }
 
+
 .buttons {
     /* border: 1px solid black; */
     width: 80%;
@@ -74,11 +75,24 @@
 .Data {
     /* border: 1px solid black; */
     width: 80%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+.emailid{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    height: 10px;
+    font-size: x-small;
+}
+.forgotpass{
+    margin-left: 190px;
+    width: 81px;
+    height: 13px;
+    font: normal normal normal 10px/13px Roboto;
 }
 
 .inputdetails {
@@ -88,10 +102,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    /* align-items: center; */
 }
 
-.inputdetails input {
+.emailinput {
     /* border: 1px solid black; */
     width: 97%;
     height: 15%;
@@ -104,6 +118,8 @@
     height: 20%;
     background-color: #A03037;
     border: none;
+    font-size: larger;
+
 }
 
 
@@ -122,4 +138,5 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    font-size: large;
 }
