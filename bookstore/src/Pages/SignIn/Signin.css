@@ -68,6 +68,7 @@
     background-color: white;
     border: none;
     color: grey;
+    cursor: pointer;
 }
 
 .Data {
@@ -109,6 +110,7 @@
     font-size: larger;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .FBGgl {
@@ -130,4 +132,5 @@
     background-color: #4266B2;
     border: grey;
     border-radius: 5px;
+    cursor: pointer;
 }
