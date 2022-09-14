@@ -1,6 +1,7 @@
 import React from "react";
-import Signin from "../Pages/SignIn/Signin";
-import Signup from "../Pages/SignUp/Signup";
+import Signin from "../SignIn/Signin";
+import Signup from "../SignUp/Signup";
+
 
 function OrderLogin() {
 

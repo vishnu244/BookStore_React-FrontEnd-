@@ -2,8 +2,9 @@ import React from 'react'
 import onlineShopping from '../../Assets/OnlineShpping.png'
 import './Signup.css'
 
+import { signUp } from '../../services/userService';
+
 import TextField from '@mui/material/TextField';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 
 const fullNameRegex = /^[A-Z]{1}[a-z]{2,}$/;
@@ -13,7 +14,7 @@ const mobileRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
 
 function Signup(props) {
 
-    const [SignUpObj, setSignUpObj] = React.useState({ fullName: "", email: "", password: "", mobile: "" });
+    const [SignUpObj, setSignUpObj] = React.useState({role:"Admin",first_name:"Vishnu",last_name:"Vardhan", fullName: "", email: "", password: "",phoneNumber: "" });
     const [regexObj, setRegExObj] = React.useState({
         fullNameBorder: false,
         emailBorder: false,
@@ -35,18 +36,18 @@ function Signup(props) {
         setSignUpObj((prevState) => ({ ...prevState, password: event.target.value }));
     };
     const takeMobile = (event) => {
-        setSignUpObj((prevState) => ({ ...prevState, mobile: event.target.value }));
+        setSignUpObj((prevState) => ({ ...prevState, phoneNumber: event.target.value }));
     };
 
     const ChangeLogin = () => {
         props.ListenToSignup(false)
     }
 
-    const OnSubmit = () => {
+    const OnSubmit = async () => {
         let fullNameTest = fullNameRegex.test(SignUpObj.fullName);
         let emailTest = emailRegex.test(SignUpObj.email);
         let passwordTest = passwordRegex.test(SignUpObj.password);
-        let mobileTest = mobileRegex.test(SignUpObj.mobile);
+        let mobileTest = mobileRegex.test(SignUpObj.phoneNumber);
 
         if (fullNameTest === false) {
             setRegExObj((prevState) => ({
@@ -104,7 +105,10 @@ function Signup(props) {
         }
 
         if (fullNameTest === true && emailTest === true && passwordTest === true && mobileTest === true) {
-            console.log("hitt the server");
+            // console.log("hitt the server");
+            let response = await signUp(SignUpObj);
+            console.log(response)
+
         }
     };
 
@@ -144,6 +148,7 @@ function Signup(props) {
                             <TextField id="outlined-basic"
                                 variant="outlined"
                                 size="small"
+                                type="password"
                                 placeholder=" Password "
                                 onChange={takePassword}
                                 error={regexObj.passwordBorder}

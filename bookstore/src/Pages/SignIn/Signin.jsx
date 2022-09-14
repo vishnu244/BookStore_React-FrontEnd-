@@ -4,7 +4,7 @@ import './Signin.css'
 
 import TextField from '@mui/material/TextField';
 
-
+import { login } from '../../services/userService';
 
 const emailRegex = /^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
@@ -30,7 +30,7 @@ function Signin(props) {
     props.ListenToSignup(true)
   }
 
-  const OnSubmit = () => {
+  const OnSubmit = async() => {
     let emailTest = emailRegex.test(LoginObj.email);
     let passwordTest = passwordRegex.test(LoginObj.password);
 
@@ -62,7 +62,11 @@ function Signin(props) {
     }
 
     if (emailTest === true && passwordTest === true) {
-      console.log("hitt the server");
+      // console.log("hitt the server");
+      let response = await login(LoginObj);
+      // console.log(response)
+      localStorage.setItem( "token",response?.data?.data)
+
     }
   };
 
@@ -95,6 +99,7 @@ function Signin(props) {
                 <TextField id="outlined-basic"
                   variant="outlined"
                   size="small"
+                  type="password"
                   placeholder=" Password "
                   style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "50px" }}
                   onChange={takePassword}
