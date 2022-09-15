@@ -5,6 +5,8 @@ import Signup from './Pages/SignUp/Signup';
 import OrderLogin from './Pages/DashBoard/DashBoard';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
+import Books from './Components/Book/Book';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
         {/* <Signup /> */}
         {/* <OrderLogin/> */}
         {/* <Header /> */}
-        <Footer />
+        {/* <Footer /> */}
+        {/* <Books/> */}
+        <Home/>
     </div>
   );
 }

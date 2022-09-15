@@ -64,8 +64,8 @@ function Signin(props) {
     if (emailTest === true && passwordTest === true) {
       // console.log("hitt the server");
       let response = await login(LoginObj);
-      // console.log(response)
-      localStorage.setItem( "token",response?.data?.data)
+      console.log(response)
+      localStorage.setItem( "token",response?.data?.token)
 
     }
   };

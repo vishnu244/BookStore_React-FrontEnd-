@@ -1,0 +1,9 @@
+.bookarray {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 15vh 10% 0 10%;
+    width: 80vw;
+}

@@ -7,7 +7,7 @@
     flex-direction: row;
     align-items: center;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 .message{
