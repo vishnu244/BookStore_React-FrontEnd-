@@ -1,12 +1,11 @@
 .bookContainer {
     display: flex;
     flex-direction: column;
-    width: 10vw;
-    height: 40%;
+    width: 15vw;
+    height: 40vh;
     border: 1px solid #E2E2E2;
     /* border: 1px solid red; */
     margin-right: 28px;
-    margin-bottom: 28px;
 }
 
 .bookimg {

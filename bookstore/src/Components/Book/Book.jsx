@@ -7,7 +7,7 @@ function Books(props) {
 
     return (
 
-        <div>
+        // <div>
             <div className="bookContainer" >
                 <div className="bookimg">
                     <div className="images">
@@ -29,7 +29,7 @@ function Books(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        // </div>
     )
 }
 
