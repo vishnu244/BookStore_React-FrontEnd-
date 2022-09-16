@@ -8,6 +8,7 @@ import Home from './Components/Home/Home';
 import Books from './Components/Book/Book';
 import DashBoard from './Pages/DashBoard/DashBoard';
 import RouterComponent from './Routes/Router';
+import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         {/* <Books/> */}
         {/* <Home/> */}
         <RouterComponent/>
+        {/* <ForgotPassword/> */}
     </div>
   );
 }

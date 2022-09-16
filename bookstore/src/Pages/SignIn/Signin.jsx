@@ -33,6 +33,10 @@ function Signin(props) {
     props.ListenToSignup(true)
   }
 
+  const OnButton = () => {
+    Navigate('/ForgotPassword')
+  }
+
   const OnSubmit = async() => {
     let emailTest = emailRegex.test(LoginObj.email);
     let passwordTest = passwordRegex.test(LoginObj.password);
@@ -72,6 +76,7 @@ function Signin(props) {
       localStorage.setItem( "token",response?.data?.token)
 
     }
+
   };
 
   return (
@@ -110,7 +115,7 @@ function Signin(props) {
                   error={regexObj.passwordBorder}
                   helperText={regexObj.passwordHelper} />
 
-                <label className="forgotpass" >Forgot Password?</label>
+                <label className="forgotpass" onClick={OnButton}>Forgot Password?</label>
                 <button onClick={OnSubmit}>Login</button>
                 <text>OR</text>
               </div>
