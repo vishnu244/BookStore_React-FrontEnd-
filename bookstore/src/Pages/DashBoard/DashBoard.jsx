@@ -3,7 +3,8 @@ import Signin from "../SignIn/Signin";
 import Signup from "../SignUp/Signup";
 
 
-function OrderLogin() {
+
+function DashBoard() {
 
     const [switchloginsignup, setswitchloginsignup] = React.useState(false)
 
@@ -23,4 +24,4 @@ function OrderLogin() {
     )
 }
 
-export default OrderLogin
+export default DashBoard

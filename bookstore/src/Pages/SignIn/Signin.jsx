@@ -5,11 +5,14 @@ import './Signin.css'
 import TextField from '@mui/material/TextField';
 
 import { login } from '../../services/userService';
+import { useNavigate } from 'react-router-dom';
 
 const emailRegex = /^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
 
 function Signin(props) {
+
+  const Navigate = useNavigate()
 
   const [LoginObj, setLoginObj] = React.useState({ email: "", password: "" });
   const [regexObj, setRegExObj] = React.useState({
@@ -65,6 +68,7 @@ function Signin(props) {
       // console.log("hitt the server");
       let response = await login(LoginObj);
       console.log(response)
+      Navigate('/Home')
       localStorage.setItem( "token",response?.data?.token)
 
     }
