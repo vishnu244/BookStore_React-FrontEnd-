@@ -12,7 +12,7 @@ function RouterComponent() {
           <Routes>
               <Route  path="/" element={ <DashBoard/>}/> 
               <Route  path="Home" element={ <Home/>}/>
-              <Route path = "ForgotPassword" element={<ForgotPassword/>} />
+              <Route  path = "ForgotPassword" element={<ForgotPassword/>} />
           </Routes>
       </BrowserRouter>
     </div>
