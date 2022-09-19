@@ -20,18 +20,18 @@ function BookView(props) {
                     </div>
                 </div>
                 <div className="bkname">
-                    <h2 className="bknme">Don't Make Me Think</h2>
-                    <p className="athrname">by Steve Krug</p>
+                    <h2 className="bknme"> {/* {props.book.name} */}Don't Make Me Think</h2>
+                    <p className="athrname">by{/* {props.book.author} */} Steve Krug</p>
                     <div className="rtng">
-                        <button className="rtngbtn">4.5*</button>
-                        <p className="qnty">(20)</p>
+                        <button className="rtngbtn">{/* {props.book.rating} */}4.5*</button>
+                        <p className="qnty">{/* {props.book.quantity} */}(20)</p>
                     </div>
                     <div className="prcediv">
-                        <h3 className="prce">Rs.1500</h3>
-                        <p className="dscntprce">Rs.dis</p>
+                        <h3 className="prce">{/* {props.book.price} */}Rs.1500</h3>
+                        <p className="dscntprce">{/* {props.book.discountPrice} */}Rs.dis</p>
                     </div>
                     <hr />
-                    <h4 className="bookdetails">Book Details</h4>
+                    <h4 className="bookdetails">{/* {props.book.description} */}Book Details</h4>
                     <p className="para">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

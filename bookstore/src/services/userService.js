@@ -10,12 +10,12 @@ export const login = async (loginObj) => {
     return response;
 }
 
-export const ForgotPassword = async (forgetpassObj) => {
+export const ForgotPass = async (forgetpassObj) => {
     let response = axios.post("http://127.0.0.1:8000/api/forgotPassword", forgetpassObj);
     return response;
 }
 
-export const ResetPassword = async (resetPassObj) => {
+export const ResetPass = async (resetPassObj) => {
     let response = axios.post("http://127.0.0.1:8000/api/resetPassword", resetPassObj);
     return response;
 }

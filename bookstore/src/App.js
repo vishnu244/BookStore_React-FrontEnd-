@@ -10,6 +10,7 @@ import DashBoard from './Pages/DashBoard/DashBoard';
 import RouterComponent from './Routes/Router';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import BookView from './Components/BookView/BookView';
+import ResetPassword from './Pages/ResetPassword/ResetPassword';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         {/* <Books/> */}
         {/* <Home/> */}
         {/* <RouterComponent/> */}
+        {/* <ResetPassword /> */}
         {/* <ForgotPassword/> */}
         <BookView/>
     </div>
