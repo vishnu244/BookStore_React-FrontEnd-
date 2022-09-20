@@ -11,6 +11,10 @@ export const getBooks = async () => {
     return response;
 }
 
+export const getBooksbyID = async (id) => {
+    let response = await axios.get(`http://127.0.0.1:8000/api/displayBookbyID/${id}`, header);
+    return response;
+}
 
 export const displayAllBooksInCart = () => {
     let response = axios.get("http://127.0.0.1:8000/api/displayAllBooksInCart", header)

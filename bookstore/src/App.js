@@ -11,21 +11,23 @@ import RouterComponent from './Routes/Router';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import BookView from './Components/BookView/BookView';
 import ResetPassword from './Pages/ResetPassword/ResetPassword';
+import Cart from './Components/Cart/Cart';
 
 function App() {
   return (
     <div className="App">
-        {/* <Signin /> */}
-        {/* <Signup /> */}
-        {/* <DashBoard/> */}
-        {/* <Header /> */}
-        {/* <Footer /> */}
-        {/* <Books/> */}
-        {/* <Home/> */}
-        {/* <RouterComponent/> */}
-        {/* <ResetPassword /> */}
-        {/* <ForgotPassword/> */}
-        <BookView/>
+      {/* <Signin /> */}
+      {/* <Signup /> */}
+      {/* <DashBoard/> */}
+      {/* <Header /> */}
+      {/* <Footer /> */}
+      {/* <Books/> */}
+      {/* <Home/> */}
+      <RouterComponent />
+      {/* <Cart /> */}
+      {/* <ResetPassword /> */}
+      {/* <ForgotPassword/> */}
+      {/* <BookView/> */}
     </div>
   );
 }
