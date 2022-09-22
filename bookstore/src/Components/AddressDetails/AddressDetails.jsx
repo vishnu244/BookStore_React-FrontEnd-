@@ -17,7 +17,7 @@ const townRegex = /^[A-Za-z0-9]{2,}$/;
 function AddressDetails() {
   const [view1, setView1] = React.useState(true);
 
-  const [addressObj, setaddressObj] = React.useState({ fullname: "", phonenumber: "", pincode: "", locality: "", address: " ", city: " ", landmark: "",address_type:"Home", state: "Andhra Pradesh" });
+  const [addressObj, setaddressObj] = React.useState({ fullname: "", phonenumber: "", pincode: "", locality: "", address: " ", city: " ", landmark: "", address_type: "Home", state: "Andhra Pradesh" });
   const [regexObj, setRegExObj] = React.useState({
     fullnameBorder: false, fullnameHelper: "",
     phonenumberBorder: false, phonenumberHelper: "",
@@ -59,7 +59,6 @@ function AddressDetails() {
     let addressTest = addressRegex.test(addressObj.address);
     let cityTest = cityRegex.test(addressObj.city);
     let landmarkTest = townRegex.test(addressObj.landmark);
-
 
 
     if (fullnameTest === false) {
