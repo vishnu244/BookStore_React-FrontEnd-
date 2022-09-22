@@ -13,6 +13,7 @@ import BookView from './Components/BookView/BookView';
 import ResetPassword from './Pages/ResetPassword/ResetPassword';
 import Cart from './Components/Cart/Cart';
 import AddressDetails from './Components/AddressDetails/AddressDetails';
+import OrderSuccessfull from './Components/OrderSuccessfull/OrderSuccessfull';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       {/* <ForgotPassword/> */}
       {/* <BookView/> */}
       {/* <AddressDetails/> */}
+      {/* <OrderSuccessfull/> */}
     </div>
 
   );

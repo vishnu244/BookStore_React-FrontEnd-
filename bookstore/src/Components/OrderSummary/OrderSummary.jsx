@@ -1,9 +1,17 @@
 import React from 'react'
 import './OrderSummary.css'
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 
 function OrderSummary() {
+
+    const Navigate = useNavigate()
+
+    const onCheckout = () => {
+        Navigate('/OrderSuccessfull')
+      }
+
   return (
     <div className='orderSummery-container'>
         <div className="orderSummery-text">
@@ -15,18 +23,17 @@ function OrderSummary() {
             </div>
             <div className="orderData">
                 <div className="cartItems-title"> BookName
-                    {/* {props.cartedOrderSummery.name} */}
                 </div>
                 <div className="cartItems-author"> Author
-                    by {/* {props.cartedOrderSummery.author} */}
+                    by 
                 </div>
                 <div className="cartItems-price">
-                    Rs. 1500{/* {props.cartedOrderSummery.price} */}
+                    Rs. 1500
                 </div>
             </div>
         </div>
         <div className="checkout-btn">
-            <Button variant="contained" className='checkout' /* onClick={()=>{placeOrder(props.placeOrderObj)}} */>checkout</Button>
+            <Button variant="contained" className='checkout' onClick={onCheckout}>checkout</Button>
         </div>
     </div>
   )
