@@ -1,24 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import Signin from './Pages/SignIn/Signin';
+import Signup from './Pages/SignUp/Signup';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
+import Books from './Components/Book/Book';
+import DashBoard from './Pages/DashBoard/DashBoard';
+import RouterComponent from './Routes/Router';
+import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
+import BookView from './Components/BookView/BookView';
+import ResetPassword from './Pages/ResetPassword/ResetPassword';
+import Cart from './Components/Cart/Cart';
+import AddressDetails from './Components/AddressDetails/AddressDetails';
+import OrderSuccessfull from './Components/OrderSuccessfull/OrderSuccessfull';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Signin /> */}
+      {/* <Signup /> */}
+      {/* <DashBoard/> */}
+      {/* <Header /> */}
+      {/* <Footer /> */}
+      {/* <Books/> */}
+      {/* <Home/> */}
+      <RouterComponent />
+      {/* <Cart /> */}
+      {/* <ResetPassword /> */}
+      {/* <ForgotPassword/> */}
+      {/* <BookView/> */}
+      {/* <AddressDetails/> */}
+      {/* <OrderSuccessfull/> */}
     </div>
+
   );
 }
 
