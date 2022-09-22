@@ -4,8 +4,15 @@ import education from '../../Assets/education.png'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import SearchIcon from '@mui/icons-material/Search'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+    const Navigate = useNavigate()
+
+    const onCart = () => {
+        Navigate('/cart')
+      }
+    
 
     return (
         <div>
@@ -23,7 +30,7 @@ function Header() {
                     <div style={{ color: 'white', fontSize: 'small', fontWeight: 'bold' }}>PROFILE</div>
                 </div>
                 <div className="cart">
-                    <div style={{ color: 'white' }}><ShoppingCartOutlinedIcon /></div>
+                    <div style={{ color: 'white' }} onClick={onCart}><ShoppingCartOutlinedIcon /></div>
                     <div style={{ color: 'white', fontSize: 'small', fontWeight: 'bold' }}>CART</div>
                 </div>
             </div>

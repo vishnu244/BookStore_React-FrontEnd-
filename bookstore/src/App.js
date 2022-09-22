@@ -12,6 +12,7 @@ import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import BookView from './Components/BookView/BookView';
 import ResetPassword from './Pages/ResetPassword/ResetPassword';
 import Cart from './Components/Cart/Cart';
+import AddressDetails from './Components/AddressDetails/AddressDetails';
 
 function App() {
   return (
@@ -28,7 +29,9 @@ function App() {
       {/* <ResetPassword /> */}
       {/* <ForgotPassword/> */}
       {/* <BookView/> */}
+      {/* <AddressDetails/> */}
     </div>
+
   );
 }
 

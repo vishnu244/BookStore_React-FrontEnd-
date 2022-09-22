@@ -2,7 +2,14 @@ import React from 'react'
 import Header from '../Header/Header'
 import './BookView.css'
 
+import { addBookTocart } from '../../services/dataService'
+
 function BookView(props) {
+
+    const addedToBag = () => {
+        console.log ("book added to cart")
+        addBookTocart()
+    }
 
     return (
         <div className="BookViewContainer">
@@ -16,7 +23,7 @@ function BookView(props) {
                         </div>
                     </div>
                     <div className="CartWishlist">
-                        <button className="addtobag" >ADD TO BAG</button>
+                        <button className="addtobag" onClick={addedToBag}>ADD TO BAG</button>
                         <button className="wishlist" >WISHLIST</button>
                     </div>
                 </div>
