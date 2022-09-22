@@ -51,8 +51,8 @@ export const removeBookFromWishlists = (obj) => {
     return response;
 }
 
-export const addAddress = (obj) => {
-    let response = axios.post("http://127.0.0.1:8000/api/addAddress", obj, header)
+export const addAddress = (addressObj) => {
+    let response = axios.post("http://127.0.0.1:8000/api/addAddress", addressObj, header)
     return response;
 }
 
