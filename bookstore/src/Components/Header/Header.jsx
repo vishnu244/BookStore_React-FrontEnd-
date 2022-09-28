@@ -10,16 +10,20 @@ function Header() {
     const Navigate = useNavigate()
 
     const onCart = () => {
+        console.log("Moved to Cart Page")
         Navigate('/cart')
       }
-    
+    const homepage = () => {
+        console.log("Initialised to Home Page")
+        Navigate('/Home')
+    }
 
     return (
         <div>
             <div className='HeaderContainer'>
                 <div className='imagetext'>
                     <img className='edcimg' src={education} alt="" />
-                    <div className='BS'>Bookstore</div>
+                    <div className='BS' onClick={homepage}>Bookstore</div>
                 </div>
                 <div class='icon2'>
                     <SearchIcon style={{ cursor: "pointer", width: "10%", color: "#9D9D9D" }} />

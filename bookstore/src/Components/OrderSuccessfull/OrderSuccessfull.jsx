@@ -38,7 +38,7 @@ function OrderSuccessfull() {
                         <tr>
                             <td>admin@bookstore.com</td>
                             <td>+91 8163475881</td>
-                            <td>42, 14th Main, 15th Cross,Bangalore 560034</td>
+                            <td>42, 14th Main, 15th Cross,Sector4,opp to BDA<br/> complex, near Kumarakom restaurant, HSR <br/>Layout, Bangalore 560034</td>
                         </tr>
                     </tbody>
                 </table>

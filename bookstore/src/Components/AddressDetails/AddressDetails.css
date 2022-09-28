@@ -4,9 +4,9 @@
     justify-content: flex-start;
     border: 1px solid #DCDCDC;
     width: 60vw;
-    height: 60vh;
-    margin-top: 10vh;
-    /* margin-left: 15vw; */
+    height: 70vh;
+    margin-top: 2rem;
+    margin-left: 10rem;
 }
 
 .details {
@@ -46,6 +46,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 48%;
+    height: 10%;
 }
 
 .name {
@@ -145,4 +146,9 @@
     flex-direction: row;
     justify-content: flex-start;
     margin-left: 40%;
+}
+
+.ordersummary{
+    margin-left: 10rem;
+    margin-top: 1rem;
 }

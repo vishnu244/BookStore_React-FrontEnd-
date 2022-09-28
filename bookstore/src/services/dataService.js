@@ -16,8 +16,8 @@ export const getBooksbyID = async (id) => {
     return response;
 }
 
-export const displayAllBooksInCart = () => {
-    let response = axios.get("http://127.0.0.1:8000/api/displayAllBooksInCart", header)
+export const getAllBooksincart = () => {
+    let response = axios.get("http://127.0.0.1:8000/api/getAllBooksincart", header)
     return response;
 }
 
@@ -31,8 +31,8 @@ export const updateQuantityInCart = (cartQtyObj) => {
     return response;
 }
 
-export const removeBookFromCart = (cartQtyObj) => {
-    let response = axios.post("http://127.0.0.1:8000/api/removeBookFromCart", cartQtyObj, header)
+export const removeBookFromCart = (cartObj) => {
+    let response = axios.delete("http://127.0.0.1:8000/api/removeBookFromCart",cartObj, header)
     return response;
 }
 

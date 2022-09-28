@@ -38,6 +38,8 @@
     letter-spacing: 0px;
     color: #0A0102;
     margin-bottom: 0px;
+    margin-left: 10%;
+
 }
 
 .abkauthor {
@@ -50,12 +52,14 @@
     letter-spacing: 0px;
     color: #9D9D9D;
     margin-bottom: 0px;
+    margin-left: 10%;
 }
 
 .abookprice {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
+    /* border: 1px solid black; */
 }
 
 .aincrement {
@@ -63,19 +67,22 @@
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 30px;
+    /* border: 1px solid black; */
+
 }
 
 
 .aminus {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
+    /* align-items: center; */
     width: 24px;
     height: 24px;
     background: #FAFAFA 0% 0% no-repeat padding-box;
     border: 1px solid #DBDBDB;
     border-radius: 100%;
-    padding-left: 8px;
+    /* padding-left: 8px; */
     margin-left: 5px;
     /* text-align: center; */
     /* align-items: center; */

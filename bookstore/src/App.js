@@ -14,6 +14,8 @@ import ResetPassword from './Pages/ResetPassword/ResetPassword';
 import Cart from './Components/Cart/Cart';
 import AddressDetails from './Components/AddressDetails/AddressDetails';
 import OrderSuccessfull from './Components/OrderSuccessfull/OrderSuccessfull';
+import Wishlistpage from './Components/WishList/Wishlistpage';
+import GetCartPage from './Components/GetCartPage/GetCartPage';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
       {/* <BookView/> */}
       {/* <AddressDetails/> */}
       {/* <OrderSuccessfull/> */}
+      {/* <Wishlistpage/> */}
+      {/* <GetCartPage/> */}
     </div>
 
   );

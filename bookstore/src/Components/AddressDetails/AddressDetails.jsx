@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../Header/Header'
 import OrderSummary from '../OrderSummary/OrderSummary';
 import './AddressDetails.css'
 import { TextField } from '@mui/material';
@@ -8,7 +7,7 @@ import { addAddress } from '../../services/dataService';
 const fullnameRegex = /^[A-Z]{1}[a-z]{1,}$/;
 const mobileRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
 const pincodeRegex = /^[1-9]{1}[0-9]{5}$/
-const localityRegex = /^[A-Z]{1}[a-z]{1,}$/;
+const localityRegex = /^[A-Za-z0-9]{2,}$/;
 const addressRegex = /^[A-Za-z0-9]{2,}$/;
 const cityRegex = /^[A-Za-z0-9]{2,}$/;
 const townRegex = /^[A-Za-z0-9]{2,}$/;
@@ -65,7 +64,7 @@ function AddressDetails() {
       setRegExObj((prevState) => ({
         ...prevState,
         fullnameBorder: true,
-        fullnameHelper: "enter correct Name",
+        fullnameHelper: "enter First Letter Capital",
       }));
     } else if (fullnameTest === true) {
       setRegExObj((prevState) => ({
@@ -79,7 +78,7 @@ function AddressDetails() {
       setRegExObj((prevState) => ({
         ...prevState,
         phonenumberBorder: true,
-        phonenumberHelper: "enter correct email",
+        phonenumberHelper: "Enter 10 digit number",
       }));
     } else if (phonenumberTest === true) {
       setRegExObj((prevState) => ({
@@ -92,7 +91,7 @@ function AddressDetails() {
       setRegExObj((prevState) => ({
         ...prevState,
         pincodeBorder: true,
-        pincodeHelper: "enter correct password",
+        pincodeHelper: "PinCode must have 6digits",
       }));
     } else if (pincodeTest === true) {
       setRegExObj((prevState) => ({
@@ -106,7 +105,7 @@ function AddressDetails() {
       setRegExObj((prevState) => ({
         ...prevState,
         localityBorder: true,
-        localityHelper: "Enter correct Mobile Number",
+        localityHelper: "Enter proper details",
       }));
     } else if (localityTest === true) {
       setRegExObj((prevState) => ({
@@ -120,7 +119,7 @@ function AddressDetails() {
       setRegExObj((prevState) => ({
         ...prevState,
         addressBorder: true,
-        addressHelper: "Enter correct Mobile Number",
+        addressHelper: "Enter proper details",
       }));
     } else if (addressTest === true) {
       setRegExObj((prevState) => ({
@@ -134,7 +133,7 @@ function AddressDetails() {
       setRegExObj((prevState) => ({
         ...prevState,
         cityBorder: true,
-        cityHelper: "Enter correct Mobile Number",
+        cityHelper: "Enter proper details",
       }));
     } else if (cityTest === true) {
       setRegExObj((prevState) => ({
@@ -148,7 +147,7 @@ function AddressDetails() {
       setRegExObj((prevState) => ({
         ...prevState,
         landmarkBorder: true,
-        landmarkHelper: "Enter correct Mobile Number",
+        landmarkHelper: "Enter proper details",
       }));
     } else if (landmarkTest === true) {
       setRegExObj((prevState) => ({
@@ -181,7 +180,7 @@ function AddressDetails() {
                 variant="outlined"
                 size="small"
                 placeholder=" Full Name "
-                style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", width: "100%" }}
+                style={{/* display: "flex", flexDirection: "column", justifyContent: "flex-start", */ width: "100%" }}
                 onChange={takefullname}
                 error={regexObj.fullnameBorder}
                 helperText={regexObj.fullnameHelper} />
@@ -253,7 +252,7 @@ function AddressDetails() {
             </div>
           </div>
           <label className="type">Type</label>
-          <div className="radio"/* onClick={handleradio} */>
+          <div className="radio" /* onClick={handleradio} */>
             <input type="radio" className="home" value="Home" name="type" /> Home
             <input type="radio" className="work" value="Work" name="type" /> work
             <input type="radio" className="orther" value="Orther" name="type" /> Orther
