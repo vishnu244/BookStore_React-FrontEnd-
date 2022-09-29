@@ -4,7 +4,6 @@ import Footer from '../Footer/Footer'
 import Books from '../Book/Book'
 import './Home.css'
 import { getBooks } from '../../services/dataService'
-import { getBooksbyID } from '../../services/dataService'
 import BookView from '../BookView/BookView'
 
 function Home() {
@@ -22,7 +21,6 @@ function Home() {
   }
 
   const booksarray = books.map(book => (<Books book={book} books={books} ListenToBookList={ListenToBookList} listenToEachBook={listenToEachBook} />))
-  // console.log(books.length)
 
   useEffect(() => {
     displayBooks();
@@ -45,28 +43,16 @@ function Home() {
     })
 
   }
-  // useEffect(() => {
-  //   getBooks().then((response) => { console.log(response);
-  //     if(searchBook) {
-  //       let filterbooks = response.data.success.filter( books => books.name.toLowerCase().includes(searchBook.toLowerCase()))
-  //       setbooks(filterbooks)
-  //     }
-  //     else{
-  //       setbooks(response.data.success) })
-
-  //     }
-  // }, [])
 
 
   const showSearchedBooks = (string) => {
-      setSearchBook(string)
-    }
+    setSearchBook(string)
+  }
   return (
     <div>
       <Header showSearchedBooks={showSearchedBooks} />
       <div className='bookarray'>
         {view ? booksarray : <BookView selecbook={selecbook} />}
-        {/* {booksarray}  */}
       </div>
       <Footer />
     </div>

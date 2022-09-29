@@ -31,7 +31,7 @@ function Header(props) {
                 </div>
                 <div class='icon2'>
                     <SearchIcon style={{ cursor: "pointer", width: "10%", color: "#9D9D9D" }} />
-                    <input type="text" placeholder="Search..."  onChange={searchBooks}></input>
+                    <input type="text" placeholder="Search..." onChange={searchBooks}></input>
                 </div>
                 <div className="profile" /* onClick={handleButtonClick} */>
                     <div style={{ color: 'white' }}><PersonOutlineOutlinedIcon /></div>
