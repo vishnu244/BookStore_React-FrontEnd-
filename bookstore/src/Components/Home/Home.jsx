@@ -11,6 +11,7 @@ function Home() {
   const [books, setbooks] = useState([])
   const [view, setview] = useState(true)
   const [selecbook, setselecbook] = useState("")
+  const [searchBook, setSearchBook] = React.useState('')
 
   const ListenToBookList = () => {
     setview(false)
@@ -22,13 +23,47 @@ function Home() {
 
   const booksarray = books.map(book => (<Books book={book} books={books} ListenToBookList={ListenToBookList} listenToEachBook={listenToEachBook} />))
   // console.log(books.length)
-  useEffect(() => {
-    getBooks().then((response) => { console.log(response); setbooks(response.data.success) })
-  }, [])
 
+  useEffect(() => {
+    displayBooks();
+  }, [searchBook])
+
+  const displayBooks = () => {
+
+    getBooks().then((response) => {
+      console.log(response);
+      if (searchBook) {
+        let filterbooks = response.data.success.filter(books => books.name.toLowerCase().includes(searchBook.toLowerCase()))
+        setbooks(filterbooks)
+      }
+      else {
+        setbooks(response.data.success)
+
+      }
+    }).catch((error) => {
+      console.log(error);
+    })
+
+  }
+  // useEffect(() => {
+  //   getBooks().then((response) => { console.log(response);
+  //     if(searchBook) {
+  //       let filterbooks = response.data.success.filter( books => books.name.toLowerCase().includes(searchBook.toLowerCase()))
+  //       setbooks(filterbooks)
+  //     }
+  //     else{
+  //       setbooks(response.data.success) })
+
+  //     }
+  // }, [])
+
+
+  const showSearchedBooks = (string) => {
+      setSearchBook(string)
+    }
   return (
     <div>
-      <Header />
+      <Header showSearchedBooks={showSearchedBooks} />
       <div className='bookarray'>
         {view ? booksarray : <BookView selecbook={selecbook} />}
         {/* {booksarray}  */}

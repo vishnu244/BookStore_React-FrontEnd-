@@ -8,6 +8,7 @@
     align-items: center;
     position: fixed;
     top: 0;
+    opacity: 1;
 }
 
 .imagetext {
@@ -63,7 +64,39 @@
     justify-content: space-around;
     flex-direction: column;
     cursor: pointer;
+
 }
+
+.dropdownContent {
+    display: none;
+    margin-top: 19vh;
+}
+
+.profile:hover .dropdownContent {
+    display: block;
+}
+
+.dropdownContent a {
+    display: block;
+    float: none;
+    color: white;
+    padding: 5px 16px;
+    text-decoration: none;
+    text-align: left;
+    /* width: 10vw; */
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #A03037;
+    min-width: 40px;
+    z-index: 1;
+    text-decoration: none;
+    /* opacity:1; */
+}
+
+
 
 .cart {
     border: 1px solid maroon;

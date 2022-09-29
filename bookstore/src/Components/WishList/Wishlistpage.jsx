@@ -1,34 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Wishlistpage.css'
 import { removeBookFromWishlists } from '../../services/dataService'
+import { displayBooksFromWishlists } from '../../services/dataService'
+import WishListMain from '../wishlistmain/wishlistmain'
+import Header from '../Header/Header'
 
 function Wishlistpage(props) {
-    const removebook = () => {
-        console.log("Book Removed From WishList")
-        removeBookFromWishlists()
+
+    const [wish, setwish] = useState([])
+
+    const getWishlist = () => {
+        displayBooksFromWishlists().then((response) => { console.log(response); setwish(response.data) }).catch((error) => { console.log(error) })
     }
- 
+    useEffect(() => {
+        getWishlist()
+    }, [])
+
+    const wisharray = wish.map((item) => (
+        <WishListMain item={item} />
+    ))
+
+
     return (
 
-        <div className="wishlish">
-            <div className="mywishlis">
-                <h3 className="mywish">My Wishlist</h3>
-                {
-                    <div className="wishrow">
-                        <div className="wishimg">
-                            <img src="dontmakemethink.jpg" alt="notfound" />
-                        </div>
-                        <div className="wishdetails">
-                            <h4 className="wishbook">Don't Make Me Think</h4>
-                            <p className="wishauthor">by Steve Krug</p>
-                            <div className="wishprice">
-                                <h3 className="wprice">Rs.1500</h3>
-                                <p className="disprice">Rs.2000</p>
-                            </div>
-                        </div>
-                        <button className="removewish" onClick={removebook}>Remove</button>
-                    </div>
-                }
+        <div>
+            <Header />
+            <div className='wishtext'>
+                <h5>Home /</h5> <h4> My Wishlist</h4>
+            </div>
+            <div className="mywishlist">
+                <div className="mywish">
+                    <h3>My Wishlist</h3>
+                </div>
+                <div className="wisharray">
+                    {wisharray}
+                </div>
             </div>
         </div>
     )

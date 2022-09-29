@@ -13,26 +13,27 @@ function OrderSummary() {
       }
 
   return (
-    <div className='orderSummery-container'>
-        <div className="orderSummery-text">
-            Order Summery
+    <div className='orderSummerycontainer'>
+        <div className="orderSummerytext">
+            <p>Order Summery</p>
         </div>
-        <div className="orderSummery-orderData">
-            <div className="orderItem-image">
+        <div className="orderSummeryorderData">
+            <div className="orderItemimage">
                 <img src="dontmakemethink.jpg" alt="" className='orderItem-image-img' />
             </div>
             <div className="orderData">
-                <div className="cartItems-title"> BookName
+                <div className="cartItems-title">
+                    The Girl in Room 105
                 </div>
-                <div className="cartItems-author"> Author
-                    by 
+                <div className="cartItems-author"> 
+                    by chetan Bhagat
                 </div>
                 <div className="cartItems-price">
-                    Rs. 1500
+                    Rs. 495
                 </div>
             </div>
         </div>
-        <div className="checkout-btn">
+        <div className="checkoutbtn">
             <Button variant="contained" className='checkout' onClick={onCheckout}>checkout</Button>
         </div>
     </div>
