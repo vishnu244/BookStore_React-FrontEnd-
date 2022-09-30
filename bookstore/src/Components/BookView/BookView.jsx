@@ -1,31 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Header/Header'
 import './BookView.css'
 
 import { addBookTocart } from '../../services/dataService'
+import { addBookToWishlist } from '../../services/dataService'
 
 function BookView(props) {
+    const [view, setview] = useState(true)
 
     const addedToBag = () => {
-        console.log ("book added to cart")
-        addBookTocart()
+        const cartObj = {
+            book_id: Number(props.selecbook.id),
+            book_quantity: Number(props.selecbook.quantity)
+        }
+        addBookTocart(cartObj)
+        setview(false)
+        console.log("book added to cart")
+
+    }
+    const addedToWishList = () => {
+        
+        const wishlistobj = {
+            cart_id:Number(props.selecbook.id),
+            book_id:Number(props.selecbook.id),
+
+        }
+        addBookToWishlist(wishlistobj)
+        console.log("book added to WishList")
     }
 
     return (
         <div className="BookViewContainer">
             <Header />
             <div className='MiddleOfBookView'>
-                <div className="ImageCoumn">
+                <div className="ImageColumn">
                     <div className="imgborder">
                         <div className="bkimg">
-
                             <img src={props.selecbook.image} />
                         </div>
                     </div>
-                    <div className="CartWishlist">
-                        <button className="addtobag" onClick={addedToBag}>ADD TO BAG</button>
-                        <button className="wishlist" >WISHLIST</button>
-                    </div>
+                    {view ?
+                        <div className="CartWishlist">
+                            <button className="addtobag" onClick={addedToBag}>ADD TO BAG</button>
+                            <button className="wishlist" onClick={addedToWishList}>WISHLIST</button>
+                        </div> : <button className="added" >Added To Bag</button>}
                 </div>
                 <div className="bkname">
                     <h2 className="bknme"> {props.selecbook.name}{/* Don't Make Me Think */}</h2>
@@ -54,10 +72,9 @@ function BookView(props) {
                             <span style={{ fontSize: "20px", marginRight: "15px" }}>&#9734;</span>
                             <span style={{ fontSize: "20px", marginRight: "15px" }}>&#9734;</span>
                         </div>
-                        <input type="text" className="reviewinput" placeholder="write your revie" />
+                        <input type="text" className="reviewinput" placeholder="write your review" />
                         <button className="submits">SUBMIT</button>
                     </div>
-
                 </div>
             </div>
         </div>

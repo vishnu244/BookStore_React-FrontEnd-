@@ -1,10 +1,17 @@
-.cartbookimg {
+.cartlist {
+    border: 1px solid grey;
+    width: 60vw;
+    margin-left: 20vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 12%;
-    height: 12%;
-    margin-left: 36px;
+    align-items: center;
+}
+
+
+.cartbookimg {
+    /* border: 1px solid green; */
+    width: 6rem;
 }
 
 .cartbookimg img {
@@ -12,73 +19,68 @@
     height: 100%;
 }
 
-.aboutbookrow {
+.aboutbook {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    /* border: 1px solid green; */
+}
+
+.nameauth {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.abookname {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    font: normal normal normal 16px/17px Lato;
+    margin-left: 5%;
+}
+
+.abkauthor {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    font: normal normal normal 14px/12px Lato;
+    color: #9D9D9D;
+    margin-left: 5%;
+}
+
+.abookprice {
+    /* border: 1px solid red; */
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding:1rem;
-
-}
-
-.aboutbook {
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px;
-    /* border: 1px solid green; */
-}
-
-.abookname {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 150px;
-    height: 25px;
-    font: normal normal normal 16px/17px Lato;
-    letter-spacing: 0px;
-    color: #0A0102;
-    margin-bottom: 0px;
-}
-
-.abkauthor {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100px;
-    height: 20px;
-    font: normal normal normal 14px/12px Lato;
-    letter-spacing: 0px;
-    color: #9D9D9D;
-    margin-bottom: 0px;
-}
-
-.abookprice {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    margin-left: 5%;
 }
 
 .aincrement {
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 30px;
+    margin-left: 5%;
+    margin-bottom: 1rem;
 }
-
 
 .aminus {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 24px;
-    height: 24px;
-    background: #FAFAFA 0% 0% no-repeat padding-box;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
     border: 1px solid #DBDBDB;
     border-radius: 100%;
-    padding-left: 8px;
-    margin-left: 5px;
-    /* text-align: center; */
-    /* align-items: center; */
 }
 
 .aitemss {
@@ -95,75 +97,19 @@
 
 .aplus {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background: #FAFAFA 0% 0% no-repeat padding-box;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
     border: 1px solid #DBDBDB;
     border-radius: 100%;
+}
+
+.aincrement button {
+    /* border: 1px solid yellow; */
+    width: 5rem;
+    height: 1.5rem;
+    display: flex;
     align-items: center;
-    /* padding-left: 7px; */
-    margin-left: 5px;
-
-}
-
-.aremove {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-left: 15px;
-    margin-top: 5px;
-    width: 48px;
-    height: 20px;
-    font: normal normal normal 14px/15px Lato;
-    letter-spacing: 0px;
-    color: #0A0102;
-    outline: none;
-    border: none;
-    background: transparent;
-}
-
-.aplaceorder {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 151px;
-    height: 35px;
-    border-radius: 2px;
-    color: #FFFFFF;
-    margin-left: 550px;
-    margin-bottom: 20px;
-}
-
-.plceorder {
-    background-color: #3371B5;
-    border: none;
-    outline: none;
-    color: #FFFFFF;
-
-}
-.PlaceOrder {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 160px;
-    height: 35px;
-    background: #3371B5 0% 0% no-repeat padding-box;
-    border-radius: 3px;
-    /* margin-left: 84px; */
-    outline: none;
-    border: none;
-    color: #FFFFFF;
-    align-items: center;
-    /* margin-top:8rem; */
-
-}
-.PlaceOrderDiv{
-    display:flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    align-items: flex-end;
-   /*  border:1px solid red; */
-    margin-left:15rem;
+    margin-top: 0;
+    margin-left: 60%;
 }

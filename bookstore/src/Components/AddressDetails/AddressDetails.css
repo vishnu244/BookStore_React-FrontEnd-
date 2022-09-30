@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    border: 1px solid #DCDCDC;
+    border: 1px solid grey;
     width: 60vw;
-    height: 60vh;
-    margin-top: 10vh;
-    /* margin-left: 15vw; */
+    height: 70vh;
+    margin-top: 2rem;
+    margin-left: 20vw;
 }
 
 .details {
@@ -46,6 +46,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 48%;
+    height: 10%;
 }
 
 .name {
@@ -106,7 +107,7 @@
     align-items: center;
     /* margin-bottom: 5%; */
     margin-left: 10%;
-    width: 80%;
+    /* width: 80%; */
     cursor: pointer;
 }
 
@@ -120,6 +121,8 @@
 }
 
 .radio {
+    /* border: 1px solid red; */
+    width: 92%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -137,12 +140,17 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-left: 40%;
+    margin-left: 2rem;
 }
 
 .orther {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-left: 40%;
+    margin-left: 2rem;
+}
+
+.ordersummary{
+    margin-left: 20vw;
+    margin-top: 1rem;
 }
